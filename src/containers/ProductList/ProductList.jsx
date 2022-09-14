@@ -1,25 +1,28 @@
 import React from 'react'
 import { ProductItem } from '../../components/ProductItem/ProductItem'
-import Data from '../../components/Data/Data'
+import data from '../../components/data/data'
 import './ProductList.scss'
 import { useState } from 'react'
 import { ProductModal } from '../../components/ProductModal/ProductModal'
 
 export const ProductList = () => {
-  const [currentProduct, setCurrentProduct] = useState(null)
+  const [currentProduct, setCurrentProduct] = useState('')
   const [isModalActive, setIsModalActive] = useState(true)
   const setProduct = (product) => {
     setCurrentProduct(product)
     setIsModalActive(true)
-    console.log('product', product)
   }
   return (
-    <div className='product-list'>
-      {currentProduct && <ProductModal active={isModalActive} setActive={setIsModalActive} currentProduct={currentProduct}/>}
-      {Data.map((product) => {
-        return <ProductItem product={product} onClicked={() => setProduct(product)}/>
-      })}
-
+    <div>
+        <div className='product-list'>
+          {data.map((product) => {
+            return <ProductItem key={product.id} product={product} onClicked={() => setProduct(product)}/>
+          })}
+        </div>
+        {currentProduct &&
+          <ProductModal active={isModalActive} setActive={setIsModalActive} currentProduct={currentProduct}/>
+        }
+      
     </div>
   )
 }

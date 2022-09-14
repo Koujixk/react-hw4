@@ -11,16 +11,17 @@
     transition: .5s;
     opacity: 0;
     pointer-events: none;
+    align-items: center;
 }
 
-.modal .active{
+.active{
     opacity: 1;
     pointer-events:all;
 }
 
 .modal-content{
     width: 500px;
-    height: 550px;
+    height: 700px;
     padding: 20px;
     border-radius: 8px;
     background-color: #fff;
@@ -47,8 +48,8 @@
     height: 35px;
     width: 35px;
     position: absolute;
-    bottom: 87%;
-    left: 65%;
+    bottom: 80%;
+    left: 60%;
 }
 
 .modal-text{

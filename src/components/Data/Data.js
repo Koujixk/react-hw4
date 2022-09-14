@@ -1,4 +1,4 @@
-const Data = [
+const data = [
     {
     id: 1,
     title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -79,4 +79,4 @@ const Data = [
     category: "electronics",
     image: "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
     },]
-export default Data
+export default data
