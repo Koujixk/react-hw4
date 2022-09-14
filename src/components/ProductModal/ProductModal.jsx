@@ -3,7 +3,6 @@ import './ProductModal.scss'
 
 export const ProductModal = (props) => {
     const {currentProduct, active, setActive} = props
-    console.log('currrent', currentProduct)
   return (
     <div className = {active ? "modal active" : "modal"} onClick={() => setActive(false)}>
         <div className="modal-content" onClick={(e)=>e.stopPropagation()}> 
